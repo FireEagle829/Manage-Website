@@ -1,0 +1,17 @@
+@import "../abstracts/variables";
+
+.get-started-button,
+.get-started-button:link,
+.get-started-button:visited {
+    padding: 10px 25px 10px 25px;
+    border-radius: 50px;
+    background-color: $color-bright-red;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s opacity ease-in-out;
+    box-shadow: 0px 10px 30px -5px $color-bright-red;
+}
+
+.get-started-button:hover {
+    opacity: 0.7;
+}

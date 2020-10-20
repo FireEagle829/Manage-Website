@@ -1,0 +1,124 @@
+.mobile-nav {
+    background-color: white;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s ease-in-out;
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    top: -265px;
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 200px;
+        li {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        li:hover {
+            color: $color-dark-grayish-blue;
+        }
+    }
+}   
+
+body {
+    position: relative;
+}
+
+.black-layer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 19;
+    bottom: 0;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 30%);
+    opacity: 0;
+    display: none;
+    transition: 0.5s ease-in-out opacity;
+}
+
+nav {
+    background-color: transparent;
+    position: relative;
+    z-index: 20;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            width: 400px;
+            justify-content: space-between;
+            li {
+                font-weight: bold;
+                cursor: pointer;
+                color: black;
+            }
+            li:hover {
+                color: $color-dark-grayish-blue;
+            }
+        }
+        a {
+            margin-top: -8px;
+        }
+        .hamburger {
+            width: 30px;
+            cursor: pointer;
+            background-size: cover;
+            height: 30px;
+            background-image: url("images/icon-hamburger.svg");
+            display: none;
+            z-index: 21 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    nav {
+        .container {
+            ul {
+                width: 390px;
+            }
+            a {
+                margin-right: -20px;
+            }
+            img {
+                margin-left: -20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        .container {
+            ul,
+            a {
+                display: none;
+            }
+            .hamburger {
+                display: block;
+            }
+        }
+        img {
+            margin-left: 0px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .mobile-nav {
+        width: 95%;
+    }
+}

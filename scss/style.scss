@@ -1,0 +1,25 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+@import "base/typography";
+@import "components/buttons";
+@import "components/testimonials-slider";
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
+
+body,
+html{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+body {
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-main;
+}

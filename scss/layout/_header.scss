@@ -1,0 +1,49 @@
+header { 
+    position: relative;
+    z-index: 18;  
+    .header-svg {
+        background: url("images/bg-tablet-pattern.svg");
+        position: absolute;
+        background-size: cover;
+        width: 800px;
+        height: 800px;
+        top: -250px;
+        z-index: 0;
+        right: -115px;
+    }
+    .container {
+        .row {
+            align-items: center;
+            h1 {
+                font-size: 3.2rem;
+                font-weight: bolder;
+            }
+            p {
+                color: $color-dark-grayish-blue;
+                width: 65%;
+            }
+            img {
+                user-select: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        .header-svg {
+            width: 620px !important;
+            height: 620px !important;
+            right: calc(-10% - 17rem);
+        }
+        .container {
+            .row {
+                flex-direction: column-reverse;
+                text-align: center;
+                p {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

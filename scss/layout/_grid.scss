@@ -1,0 +1,105 @@
+.grid-system {
+    position: relative;
+    z-index: 5;
+    overflow-y: visible;
+    .svg {
+        position: absolute;
+        height: 600px;
+        width: 600px;
+        background-image: url("images/bg-tablet-pattern.svg");
+        z-index: 0;
+        background-size: cover;
+        bottom: -320px;
+        left: -200px;
+    }
+    .grid {
+        position: relative;
+        z-index: 10;
+        display: grid;
+        display: -moz-grid;
+        display: -ms-grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 75px;
+        p {
+            color: $color-dark-grayish-blue;
+        }
+        div {
+            h1 {
+                font-weight: bolder;
+                font-size: 3rem;
+            }
+            p:not(.grid-system-flex-section-text) {
+                width: 65%;
+            }
+            .grid-system-flex-section {
+                margin-top: 15px;
+                margin-bottom: 10px;
+                h6 {
+                    font-weight: bolder;
+                    font-size: 1.1rem;
+                }
+                span {
+                    padding: 5px 20px 8px 20px;
+                    background-color: $color-bright-red;
+                    border-radius: 100px;
+                    color: white;
+                    margin-right: 20px;
+                }
+                display: flex;
+                align-items: flex-start;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid-system {
+        .svg {
+            width: 400px;
+            height: 400px;
+            top: -350px;
+            right: -230px;
+            left: auto;
+        }
+        .grid {
+            span {
+                position: relative;
+                z-index: 10;
+            }
+            .grid-system-flex-section {
+                position: relative;
+                p {
+                    margin-left: -16%;
+                }
+            }
+            grid-template-columns: 1fr;
+            .grid-column-1 {
+                text-align: center;
+                p {
+                    width: 100% !important;
+                }
+                margin-bottom: 20px;
+            }
+            h6 {
+                margin: auto !important;
+                font-size: 0.9rem !important;
+            }
+            p {
+                font-size: 0.85rem !important;
+            }
+            .grid-system-flex-section-container {
+                background-color: #FFF0EC;
+                display: flex;
+                border-radius: 30px;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                margin-bottom: 25px;
+                padding-top: 9px;
+                padding-bottom: 8px;
+                margin-left: -40px;
+                margin-right: -40px;
+            }
+        }
+    }
+}
